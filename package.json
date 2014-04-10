@@ -1,0 +1,25 @@
+{
+  "name": "gmap",
+  "version": "0.2.0",
+  "description": "Google maps customizer ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamaal-/gmap.git"
+  },
+  "keywords": [
+    "google",
+    "maps",
+    "google-maps",
+    "backbonejs"
+  ],
+  "author": "Kamaal Aboothalib",
+  "license": "GPL2",
+  "bugs": {
+    "url": "https://github.com/kamaal-/gmap/issues"
+  },
+  "homepage": "https://github.com/kamaal-/gmap"
+}
