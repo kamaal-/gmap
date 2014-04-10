@@ -17,12 +17,47 @@ module.exports = function(grunt) {
       }
     },
 
+    'jshint' : {
+      // define the files to lint
+      files: ['src/js/app.js'],
+
+      // configure JSHint (documented at http://www.jshint.com/docs/)
+      options: {
+          // more options here if you want to override JSHint defaults
+        globals: {
+          jQuery: true,
+          console: true,
+          module: true
+        }
+      }
+    },
+
+    compass: {
+      bootstrap: {
+        options: {
+          config: 'src/config.rb',
+          environment: 'development',
+          force: grunt.option('force') || false,
+          outputStyle : 'compressed'
+        }
+      }
+    },
+
+
+    'watch' : {
+      files: ['src/js/*.js', 'src/sass/*.scss', 'index.html'],
+      tasks: ['compass', 'uglify', 'jshint'],
+      options: {
+        livereload: false,
+      }
+    }
+
 
   });
 
 
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify', 'jshint']);
 
 };

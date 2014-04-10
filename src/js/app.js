@@ -1,11 +1,15 @@
 /*
  * ﷽ 
  */
-'use strict';
+(function ($, window, document){
 
-var App = {
-	Models : {},
-	Collections : {},
-	Views : {} 
-} 
+	"use strict";
 
+	var App = {
+		Models : {},
+		Collections : {},
+		Views : {} 
+	};
+	
+
+}(jQuery, window, document));
