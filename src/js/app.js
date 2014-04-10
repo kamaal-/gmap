@@ -4,8 +4,8 @@
 'use strict';
 
 var App = {
-	Models = {},
-	Collections = {},
+	Models : {},
+	Collections : {},
 	Views : {} 
 } 
 
