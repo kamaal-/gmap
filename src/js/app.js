@@ -5,10 +5,12 @@
 
 	"use strict";
 
-	var App = {
+	window.App = {
 		Models : {},
 		Collections : {},
 		Views : {} 
 	};
 	
+	var marker = new App.Models.Marker();
+
 }(jQuery, window, document));

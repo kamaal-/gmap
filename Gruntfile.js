@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       }, 
       'plugin_build' : {
         files : {
-          'js/vendor/plugins.min.js' : [ 'src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js']
+          'js/vendor/plugins.min.js' : [ 'src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js', 'src/js/models/marker.model.js']
         }
       }
     },
