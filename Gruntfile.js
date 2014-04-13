@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 
     'watch' : {
       files: ['src/js/*.js', 'src/sass/*.scss', 'index.html'],
-      tasks: ['uglify:plugin_build', 'uglify', 'jshint'],
+      tasks: ['compass', 'uglify:plugin_build', 'uglify', 'jshint'],
       options: {
         livereload: false,
       }
