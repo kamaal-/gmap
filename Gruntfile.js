@@ -7,6 +7,17 @@ module.exports = function(grunt) {
     
     pkg: grunt.file.readJSON('package.json'),
 
+    concat: {
+      options: {
+        separator: ';',
+      },
+      dist: {
+        src:[ 'src/js/app.js', 'src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js', 'src/js/models/marker.model.js'],
+        dest: 'js/app.min.js'
+      },
+    },
+
+
     'uglify' : {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -16,6 +27,7 @@ module.exports = function(grunt) {
         dest: 'js/app.min.js'
       }, 
       'plugin_build' : {
+        
         files : {
           'js/vendor/plugins.min.js' : [ 'src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js', 'src/js/models/marker.model.js']
         }
@@ -51,7 +63,7 @@ module.exports = function(grunt) {
 
     'watch' : {
       files: ['src/js/*.js', 'src/sass/*.scss', 'index.html'],
-      tasks: ['compass', 'uglify:plugin_build', 'uglify', 'jshint'],
+      tasks: ['compass', 'concat', 'jshint'],
       options: {
         livereload: false,
       }

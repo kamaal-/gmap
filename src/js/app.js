@@ -1,16 +1,18 @@
 /*
  * ﷽ 
  */
-(function ($, window, document){
-
-	"use strict";
-
-	window.App = {
+var App = {
 		Models : {},
 		Collections : {},
 		Views : {} 
 	};
-	
-	var marker = new App.Models.Marker();
 
-}(jQuery, window, document));
+jQuery(document).ready(function($) {
+
+	"use strict";
+	
+	var marker = new App.Models.Marker({
+		
+	});
+
+});
