@@ -4,7 +4,7 @@
 (function ($, window, document){
 
 	"use strict";
-
+	
 	var App = {
 		Models : {},
 		Collections : {},

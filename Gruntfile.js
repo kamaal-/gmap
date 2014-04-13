@@ -14,6 +14,11 @@ module.exports = function(grunt) {
       build: {
         src: 'src/js/app.js',
         dest: 'js/app.min.js'
+      }, 
+      'plugin_build' : {
+        files : {
+          'js/vendor/plugins.min.js' : [ 'src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js']
+        }
       }
     },
 
@@ -46,7 +51,7 @@ module.exports = function(grunt) {
 
     'watch' : {
       files: ['src/js/*.js', 'src/sass/*.scss', 'index.html'],
-      tasks: ['compass', 'uglify', 'jshint'],
+      tasks: ['compass', 'uglify:plugin_build', 'uglify', 'jshint'],
       options: {
         livereload: false,
       }
