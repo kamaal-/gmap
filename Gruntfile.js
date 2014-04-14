@@ -7,36 +7,27 @@ module.exports = function(grunt) {
     
     pkg: grunt.file.readJSON('package.json'),
 
-    concat: {
-      options: {
-        separator: ';',
-      },
-      dist: {
-        src:[  'src/js/app.js', 'src/js/svg/svg.markers.js','src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js', 'src/js/models/marker.model.js'],
-        dest: 'js/app.min.js'
-      },
-    },
+
 
 
     'uglify' : {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner: '/*\n'+
+                ' * ﷽ \n' +
+                ' *\n'+
+                '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+
       },
       build: {
-        src:[ 'src/js/app.js', 'src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js', 'src/js/models/marker.model.js'],
+        src:[ 'js/app.js'],
         dest: 'js/app.min.js'
-      }, 
-      'plugin_build' : {
-        
-        files : {
-          'js/vendor/plugins.min.js' : [ 'src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js', 'src/js/models/marker.model.js']
-        }
       }
+      
     },
 
     'jshint' : {
       // define the files to lint
-      files: ['src/js/app.js'],
+      files: ['js/app.js'],
 
       // configure JSHint (documented at http://www.jshint.com/docs/)
       options: {
@@ -63,7 +54,7 @@ module.exports = function(grunt) {
 
     'watch' : {
       files: ['src/js/*.js', 'src/sass/*.scss', 'index.html'],
-      tasks: ['compass', 'concat', 'jshint'],
+      tasks: ['compass', 'jshint', 'uglify'],
       options: {
         livereload: false,
       }
@@ -73,6 +64,6 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'jshint']);
+  grunt.registerTask('default', ['jshint', 'uglify']);
 
 };

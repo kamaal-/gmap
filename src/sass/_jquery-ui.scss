@@ -579,7 +579,7 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner {
     padding: 0;
     width: 100%;
     /* support: IE10, see #8844 */
-    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+    //list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
   }
   .ui-menu-divider {
     margin: 5px -2px 5px -2px;
@@ -646,7 +646,7 @@ input.ui-button::-moz-focus-inner, button.ui-button::-moz-focus-inner {
     height: 100%;
   }
   .ui-progressbar-overlay {
-    background: url("images/animated-overlay.gif");
+   // background: url("images/animated-overlay.gif");
     height: 100%;
     filter: alpha(opacity = 25);
     opacity: 0.25;
@@ -875,7 +875,7 @@ body .ui-tooltip {
 
 .ui-widget-header {
   border: 1px solid #aaaaaa;
-  background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+  //background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
   color: #222222;
   font-weight: bold;
   a {
@@ -888,7 +888,7 @@ body .ui-tooltip {
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   border: 1px solid #dddddd;
-  background: #dddddd url("images/ui-bg_flat_0_dddddd_40x100.png") 50% 50% repeat-x;
+  //background: #dddddd url("images/ui-bg_flat_0_dddddd_40x100.png") 50% 50% repeat-x;
   font-weight: normal;
   color: #555555;
 }
@@ -904,7 +904,7 @@ body .ui-tooltip {
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
   border: 1px solid #FFDC00;
-  background: #ffdc00 url("images/ui-bg_flat_75_FFDC00_40x100.png") 50% 50% repeat-x;
+  //background: #ffdc00 url("images/ui-bg_flat_75_FFDC00_40x100.png") 50% 50% repeat-x;
   font-weight: normal;
   color: #111111;
 }
@@ -929,7 +929,7 @@ body .ui-tooltip {
 
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
   border: 1px solid #7FDBFF;
-  background: #7fdbff url("images/ui-bg_flat_0_7FDBFF_40x100.png") 50% 50% repeat-x;
+  //background: #7fdbff url("images/ui-bg_flat_0_7FDBFF_40x100.png") 50% 50% repeat-x;
   font-weight: normal;
   color: #212121;
 }
@@ -948,7 +948,7 @@ body .ui-tooltip {
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
   border: 1px solid #01FF70;
-  background: #01ff70 url("images/ui-bg_glass_55_01FF70_1x400.png") 50% 50% repeat-x;
+  //background: #01ff70 url("images/ui-bg_glass_55_01FF70_1x400.png") 50% 50% repeat-x;
   color: #363636;
 }
 
@@ -958,7 +958,7 @@ body .ui-tooltip {
 
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
   border: 1px solid #FF4136;
-  background: #ff4136 url("images/ui-bg_flat_95_FF4136_40x100.png") 50% 50% repeat-x;
+  //background: #ff4136 url("images/ui-bg_flat_95_FF4136_40x100.png") 50% 50% repeat-x;
   color: #ffffff;
 }
 
@@ -995,31 +995,31 @@ body .ui-tooltip {
 .ui-icon {
   width: 16px;
   height: 16px;
-  background-image: url("images/ui-icons_222222_256x240.png");
+  //background-image: url("images/ui-icons_222222_256x240.png");
 }
 
 .ui-widget-content .ui-icon, .ui-widget-header .ui-icon {
-  background-image: url("images/ui-icons_222222_256x240.png");
+  //background-image: url("images/ui-icons_222222_256x240.png");
 }
 
 .ui-state-default .ui-icon {
-  background-image: url("images/ui-icons_888888_256x240.png");
+  //background-image: url("images/ui-icons_888888_256x240.png");
 }
 
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
-  background-image: url("images/ui-icons_111111_256x240.png");
+  //background-image: url("images/ui-icons_111111_256x240.png");
 }
 
 .ui-state-active .ui-icon {
-  background-image: url("images/ui-icons_999999_256x240.png");
+  //background-image: url("images/ui-icons_999999_256x240.png");
 }
 
 .ui-state-highlight .ui-icon {
-  background-image: url("images/ui-icons_0074D9_256x240.png");
+  //background-image: url("images/ui-icons_0074D9_256x240.png");
 }
 
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
-  background-image: url("images/ui-icons_ffffff_256x240.png");
+  //background-image: url("images/ui-icons_ffffff_256x240.png");
 }
 
 /* positioning */
@@ -1746,7 +1746,7 @@ body .ui-tooltip {
 /* Overlays */
 
 .ui-widget-overlay {
-  background: #111111 url("images/ui-bg_flat_0_111111_40x100.png") 50% 50% repeat-x;
+  //background: #111111 url("images/ui-bg_flat_0_111111_40x100.png") 50% 50% repeat-x;
   opacity: .6;
   filter: Alpha(Opacity = 60);
 }
@@ -1754,7 +1754,7 @@ body .ui-tooltip {
 .ui-widget-shadow {
   margin: -8px 0 0 -8px;
   padding: 8px;
-  background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+  //background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
   opacity: .3;
   filter: Alpha(Opacity = 30);
   border-radius: 8px;
