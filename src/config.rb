@@ -1,5 +1,4 @@
 # Require any additional compass plugins here.
-
 sass_dir           = "/src/sass"
 http_path          = ""
 css_dir            = "#{http_path}/css"
