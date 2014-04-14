@@ -2,7 +2,8 @@
 define([
   'underscore',
   'backbone',
-], function(_, Backbone) {
+  'js/collections/marker.collections',
+], function(_, Backbone, MarkerCollections) {
   
   var MapView = Backbone.View.extend({
   	
@@ -27,27 +28,30 @@ define([
   	},
 
   	mapClick : function( _marker ){
-
-  		if( 'marker' === applicationStatus ){
   			
-  			this.markerCount += 1;
+		var _lat = _marker.latLng.lat(),
+			_lng = _marker.latLng.lng(),
+			_infoWindow,
+			marker;
+			
+		if( 'marker' === applicationStatus ){
 
-  			var _lat = _marker.latLng.lat(),
-  				_lng = _marker.latLng.lng(),
-  				_infoWindow = new google.maps.InfoWindow({
-  					content: "Lorem ipsum " + this.markerCount
-  				}),
-  				marker = new google.maps.Marker({
-			      	position: new google.maps.LatLng(_lat,_lng),
-			      	animation: google.maps.Animation.DROP,
-			    	draggable:true,
-			    	map: this.map,
-			      	title: "Lorem ipsum " + this.markerCount
-			  });
+			this.markerCount += 1;
 
-  		}
+			_infoWindow = new google.maps.InfoWindow({
+				content: "Lorem ipsum " + this.markerCount
+			})
+			
+			marker = new google.maps.Marker({
+		      	position: new google.maps.LatLng(_lat,_lng),
+		      	animation: google.maps.Animation.DROP,
+		    	draggable:true,
+		    	map: this.map,
+		      	title: "Lorem ipsum " + this.markerCount
+		  });
 
-  		console.log(_infoWindow);
+		}
+
 
   	}
 
