@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src:[ 'src/js/app.js', 'src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js', 'src/js/models/marker.model.js'],
+        src:[  'src/js/app.js', 'src/js/svg/svg.markers.js','src/js/vendor/plugin.js',  'src/js/vendor/underscore.js',  'src/js/vendor/backbone.js', 'src/js/models/marker.model.js'],
         dest: 'js/app.min.js'
       },
     },
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 
     'watch' : {
       files: ['src/js/*.js', 'src/sass/*.scss', 'index.html'],
-      tasks: ['compass', 'concat', 'jshint', 'uglify'],
+      tasks: ['compass', 'concat', 'jshint'],
       options: {
         livereload: false,
       }

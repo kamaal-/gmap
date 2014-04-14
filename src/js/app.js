@@ -4,7 +4,8 @@
 var App = {
 		Models : {},
 		Collections : {},
-		Views : {} 
+		Views : {},
+		SVGMarkers : {}
 	};
 
 jQuery(document).ready(function($) {
@@ -13,6 +14,9 @@ jQuery(document).ready(function($) {
 	
 	var marker = new App.Models.Marker({
 		
-	});
+		}),
+		markerSvg = App.SVGMarkers.default;
+		
+	console.log(markerSvg);
 
 });
