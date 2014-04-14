@@ -1,12 +1,20 @@
 // Filename: js/app.js
 define([
+ 
   'jquery', 
   'jquery_ui', 
   'underscore', 
   'backbone',
-], function($, _, Backbone){
+  'js/models/marker.model'
+
+], function($,ui, _, Backbone, MarkerModel){
   var initialize = function(){
-    // Pass in our Router module and call it's initialize function
+    //
+    var marker = new MarkerModel({
+      lat: '2.321'
+    });
+
+    console.log(marker.attributes);
 
   };
 
