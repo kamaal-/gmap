@@ -1,5 +1,11 @@
 @import 'variables'; 
 @import 'jquery-ui';
 body{
+	padding: 0;
+	margin: 0;
 	background: $lime;
+}
+.map-container{
+	width: 100%;
+	min-height: 1500px;
 }

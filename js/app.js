@@ -5,16 +5,21 @@ define([
   'jquery_ui', 
   'underscore', 
   'backbone',
-  'js/models/marker.model'
+  'js/models/map.model',
+  'js/views/map.view'
 
-], function($,ui, _, Backbone, MarkerModel){
+], function($,ui, _, Backbone, MapModel, MapView){
   var initialize = function(){
-    //
-    var marker = new MarkerModel({
-      lat: '2.321'
-    });
 
-    console.log(marker.attributes);
+    var mapModel = new MapModel({
+      map_class : 'new-map'
+    });
+    
+    map = new MapView({
+      model : mapModel
+    }); 
+
+    map.render();
 
   };
 
