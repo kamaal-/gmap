@@ -8,8 +8,8 @@ require.config({
     jquery_ui: 'js/vendor/jquery-ui.min',
     underscore: 'js/vendor/underscore',
     backbone: 'js/vendor/backbone',
-    
-  }
+  },
+  urlArgs: "bust=v2"
 
 });
 

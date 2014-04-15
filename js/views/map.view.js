@@ -2,9 +2,11 @@
 define([
   'underscore',
   'backbone',
-  'js/collections/marker.collections',
-], function(_, Backbone, MarkerCollections) {
+  'js/collections/marker.collections'
+], function( _, Backbone, markerCollections  ) {
+
   
+
   var MapView = Backbone.View.extend({
   	
   	initialize : function(){
@@ -14,6 +16,8 @@ define([
   	},
 
   	map: {},
+
+  	markerCollections : new markerCollections(),
 
   	markerCount : 0,
 
@@ -28,6 +32,7 @@ define([
   	},
 
   	mapClick : function( marker ){
+
   			
 		var _lat = marker.latLng.lat(),
 			_lng = marker.latLng.lng(),
@@ -58,6 +63,10 @@ define([
 				markerObj : marker,
 				title: "Marker "+ marker.__gm_id,
 		  	}
+
+		  	this.markerCollections.add(_markerModel);
+
+		  	console.log(this.markerCollections);
 
 		}
 

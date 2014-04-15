@@ -6,7 +6,8 @@ define([
   'underscore', 
   'backbone',
   'js/models/map.model',
-  'js/views/map.view'
+  'js/views/map.view',
+
 
 ], function($,ui, _, Backbone, MapModel , MapView){
   var initialize = function(){
@@ -22,9 +23,10 @@ define([
     map.render();
 
   };
-
+  
   return { 
     initialize: initialize
+    
   };
 
 });
