@@ -27,12 +27,13 @@ define([
 
   	},
 
-  	mapClick : function( _marker ){
+  	mapClick : function( marker ){
   			
-		var _lat = _marker.latLng.lat(),
-			_lng = _marker.latLng.lng(),
+		var _lat = marker.latLng.lat(),
+			_lng = marker.latLng.lng(),
 			_infoWindow,
-			marker;
+			_marker,
+			_markerModel;
 			
 		if( 'marker' === applicationStatus ){
 
@@ -42,13 +43,21 @@ define([
 				content: "Lorem ipsum " + this.markerCount
 			})
 			
-			marker = new google.maps.Marker({
+			_marker = new google.maps.Marker({
 		      	position: new google.maps.LatLng(_lat,_lng),
 		      	animation: google.maps.Animation.DROP,
 		    	draggable:true,
 		    	map: this.map,
 		      	title: "Lorem ipsum " + this.markerCount
-		  });
+		  	});
+
+		  	_markerModel = {
+		  		lat : _lat,
+				lon : _lng,
+				id : marker.__gm_id,
+				markerObj : marker,
+				title: "Marker "+ marker.__gm_id,
+		  	}
 
 		}
 

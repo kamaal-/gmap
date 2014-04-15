@@ -6,7 +6,6 @@ define([
   'underscore', 
   'backbone',
   'js/models/map.model',
-  
   'js/views/map.view'
 
 ], function($,ui, _, Backbone, MapModel , MapView){
