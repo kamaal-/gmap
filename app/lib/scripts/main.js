@@ -4,13 +4,13 @@ require.config({
 		'jquery_ui'		: 'vendor/jquery-ui/ui/jquery-ui',
 		'underscore' 	: "vendor/underscore/underscore",
 		'backbone'		: "vendor/backbone/backbone",
-		'map-icon'		: "vendor/map-icons/js/map-icon-amd",
+		'map-icon'		: "vendor/map-icons/js/map-icons",
 		'text'			: 'vendor/requirejs-plugins/lib/text',
 		'async'			: 'vendor/requirejs-plugins/src/async',
 	}
 });
 
-define(['map-icon'], function( Marker) {
+define(['async!http://maps.google.com/maps/api/js?sensor=false'], function( goo) {
 
 	// Define Marker Shapes
 		var MAP_PIN = 'M0-165c-27.618 0-50 21.966-50 49.054C-50-88.849 0 0 0 0s50-88.849 50-115.946C50-143.034 27.605-165 0-165z';
@@ -27,7 +27,11 @@ define(['map-icon'], function( Marker) {
 	var map = new google.maps.Map(document.getElementById("the-map"), mapOptions) ;
 
 	var marke = new Marker();
-		console.log(marke)
+		console.log(marke);
+
+	function set(){
+
+	}
 
     // Google Maps API and all its dependencies will be loaded here.
 });
