@@ -5,76 +5,75 @@ define([
   'js/collections/marker.collections'
 ], function( _, Backbone, markerCollections  ) {
 
-  
-
-  var MapView = Backbone.View.extend({
+    var MapView = Backbone.View.extend({
   	
-  	initialize : function(){
+      	initialize : function(){
 
-  		_.bindAll(this, 'render', 'mapClick');
+      		_.bindAll(this, 'render', 'mapClick');
 
-  	},
+      	},
 
-  	map: {},
+      	map: {},
 
-  	markerCollections : new markerCollections(),
+      	markerCollections : new markerCollections(),
 
-  	markerCount : 0,
+      	markerCount : 0,
 
-  	render : function(){
+      	render : function(){
 
-  		this.map = new google.maps.Map(document.getElementById('the-map'), this.model.attributes.mapOptions);
+      		this.map = new google.maps.Map(document.getElementById('the-map'), this.model.attributes.mapOptions);
 
-  		google.maps.event.addListener( this.map, "click", this.mapClick );
+      		google.maps.event.addListener( this.map, "click", this.mapClick );
 
-  		return this;
+      		return this;
 
-  	},
+      	},
 
-  	mapClick : function( marker ){
+      	mapClick : function( marker ){
+      			
+    		var _lat = marker.latLng.lat(),
+    			_lng = marker.latLng.lng(),
+    			_infoWindow,
+    			_marker,
+    			_markerModel;
 
-  			
-		var _lat = marker.latLng.lat(),
-			_lng = marker.latLng.lng(),
-			_infoWindow,
-			_marker,
-			_markerModel;
-			
-		if( 'marker' === applicationStatus ){
+            //Checking the app status(tab) 
+    		if( 'marker' === applicationStatus ){
 
-			this.markerCount += 1;
+    			this.markerCount += 1;
 
-			_infoWindow = new google.maps.InfoWindow({
-				content: "Lorem ipsum " + this.markerCount
-			})
-			
-			_marker = new google.maps.Marker({
-		      	position: new google.maps.LatLng(_lat,_lng),
-		      	animation: google.maps.Animation.DROP,
-		    	draggable:true,
-		    	map: this.map,
-		      	title: "Lorem ipsum " + this.markerCount
-		  	});
+    			_infoWindow = new google.maps.InfoWindow({
+    				content: "Lorem ipsum " + this.markerCount
+    			})
+    			
+                //Marker
+    			_marker = new google.maps.Marker({
+    		      	position: new google.maps.LatLng(_lat,_lng),
+    		      	animation: google.maps.Animation.DROP,
+    		    	draggable:true,
+    		    	map: this.map,
+    		      	title: "Lorem ipsum " + this.markerCount
+    		  	});
 
-		  	_markerModel = {
-		  		lat : _lat,
-				lon : _lng,
-				id : marker.__gm_id,
-				markerObj : marker,
-				title: "Marker "+ marker.__gm_id,
-		  	}
+                //Marke r Model
+    		  	_markerModel = {
+    		  		lat : _lat,
+    				lon : _lng,
+    				id : marker.__gm_id,
+    				markerObj : marker,
+    				title: "Marker "+ marker.__gm_id,
+    		  	}
 
-		  	this.markerCollections.add(_markerModel);
+                //Adding marker model to it's collection
+    		  	this.markerCollections.add(_markerModel);
 
-		  	console.log(this.markerCollections);
-
-		}
+    		}
 
 
-  	}
+        }
 
-  });
+    });
 
-  return MapView;
+    return MapView;
 
 });

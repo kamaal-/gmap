@@ -15,9 +15,9 @@ define([
 
 			this.listenTo(this, 'add', this.addMarker);
 
-                  _.bindAll(this, 'addMarker' );
+            _.bindAll(this, 'addMarker' );
     	      
-            },
+        },
 
 		model : MarkerModel,
 
