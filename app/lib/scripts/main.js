@@ -4,13 +4,13 @@ require.config({
 		'jquery_ui'		: 'vendor/jquery-ui/ui/jquery-ui',
 		'underscore' 	: "vendor/underscore/underscore",
 		'backbone'		: "vendor/backbone/backbone",
-		'map-icon'		: "vendor/map-icons/js/map-icons",
+		'map-icon'		: "vendor/map-icons/js/map-icon-amd",
 		'text'			: 'vendor/requirejs-plugins/lib/text',
 		'async'			: 'vendor/requirejs-plugins/src/async',
 	}
 });
 
-define(['async!http://maps.google.com/maps/api/js?sensor=false'], function( goo) {
+define(['async!http://maps.google.com/maps/api/js?sensor=false', 'map-icon', 'backbone'], function( goo, icon, Backbone) {
 
 	// Define Marker Shapes
 		var MAP_PIN = 'M0-165c-27.618 0-50 21.966-50 49.054C-50-88.849 0 0 0 0s50-88.849 50-115.946C50-143.034 27.605-165 0-165z';
@@ -26,8 +26,26 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false'], function( goo)
 
 	var map = new google.maps.Map(document.getElementById("the-map"), mapOptions) ;
 
-	var marke = new Marker();
-		console.log(marke);
+	
+	var marker = new icon({
+
+		position: new google.maps.LatLng(-34.397, 150.644),
+			    animation: google.maps.Animation.DROP,
+			    draggable:true,
+			    map: map,
+			    zIndex: 9,
+			    title : "Im marker",
+			    label: '<i class="map-icon-hardware-store"></i>',
+			    icon: {
+	                    path: MAP_PIN,
+	                    fillColor: '#315a40',
+	                    fillOpacity: 1,
+	                    strokeColor: '',
+	                    strokeWeight: 0,
+	                    scale: 1/2
+	            	}
+
+	});
 
 	function set(){
 
