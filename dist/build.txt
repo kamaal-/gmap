@@ -461,8 +461,9 @@ lib/scripts/main.js
 ----------------
 lib/scripts/vendor/requirejs-plugins/src/async.js
 async!http://maps.google.com/maps/api/js?sensor=false
-lib/scripts/vendor/map-icons/js/map-icon-amd.js
-lib/scripts/vendor/underscore/underscore.js
 lib/scripts/vendor/jquery/dist/jquery.js
+lib/scripts/vendor/underscore/underscore.js
 lib/scripts/vendor/backbone/backbone.js
+lib/scripts/models/map.model.js
+lib/scripts/vendor/map-icons/js/map-icon-amd.js
 lib/scripts/main.js

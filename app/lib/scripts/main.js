@@ -10,7 +10,7 @@ require.config({
 	}
 });
 
-define(['async!http://maps.google.com/maps/api/js?sensor=false', 'map-icon', 'backbone'], function( goo, icon, Backbone) {
+define(['async!http://maps.google.com/maps/api/js?sensor=false', 'models/map.model' , 'views/map.view' , 'map-icon', 'backbone'	], function( goo, MapModel, MapView, icon, Backbone) {
 
 	// Define Marker Shapes
 		var MAP_PIN = 'M0-165c-27.618 0-50 21.966-50 49.054C-50-88.849 0 0 0 0s50-88.849 50-115.946C50-143.034 27.605-165 0-165z';
@@ -24,8 +24,16 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'map-icon', 'ba
           zoom: 8
         };
 
-	var map = new google.maps.Map(document.getElementById("the-map"), mapOptions) ;
+	var map = new google.maps.Map(document.getElementById("the-map"), mapOptions);
 
+	var mp = new MapModel({
+		locaion : {
+			lat : -13.397,
+			lng : 150.644
+		}
+	});
+
+	console.log(new MapView());
 	
 	var marker = new icon({
 
