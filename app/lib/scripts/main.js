@@ -33,7 +33,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'models/map.mod
 		}
 	});
 
-	console.log(new MapView());
+	var mapView = new MapView();
 	
 	var marker = new icon({
 
@@ -54,10 +54,6 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'models/map.mod
 	            	}
 
 	});
-
-	function set(){
-
-	}
 
     // Google Maps API and all its dependencies will be loaded here.
 });

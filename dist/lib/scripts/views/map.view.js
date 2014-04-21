@@ -1,0 +1,1 @@
+define(["jquery","underscore","backbone","text!../../templates/map/map.html"],function(e,t,n,r){return function(){var e=n.View.extend({template:t.template(r,{mapClass:"ds",mapId:"gf"}),initialize:function(){console.log(this.template)}});return e}()});

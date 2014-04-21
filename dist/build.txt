@@ -465,5 +465,8 @@ lib/scripts/vendor/jquery/dist/jquery.js
 lib/scripts/vendor/underscore/underscore.js
 lib/scripts/vendor/backbone/backbone.js
 lib/scripts/models/map.model.js
+lib/scripts/vendor/requirejs-plugins/lib/text.js
+text!views/../../templates/map/map.html
+lib/scripts/views/map.view.js
 lib/scripts/vendor/map-icons/js/map-icon-amd.js
 lib/scripts/main.js

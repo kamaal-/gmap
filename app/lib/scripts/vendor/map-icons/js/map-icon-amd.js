@@ -45,14 +45,14 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false' ], function() {
 		var MarkerLabel = function(options) {
 			var self = this;
 			this.setValues(options);
-			
+
 			// Create the label container
 			this.div = document.createElement('div');
 			this.div.className = 'marker-label';
 			var span = document.createElement('span');
 			span.className = "marker-icon";
 			this.div.appendChild(span);
-		 
+
 			// Trigger the marker click handler if clicking on the label
 			google.maps.event.addDomListener(this.div, 'click', function(e){
 				(e.stopPropagation) && e.stopPropagation();
@@ -73,7 +73,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false' ], function() {
 		          google.maps.event.addListener(this, 'zindex_changed', function() { self.draw(); })
 		     ];
 		};
-		 
+
 		// Marker Label onRemove
 		MarkerLabel.prototype.onRemove = function() {
 		     this.div.parentNode.removeChild(this.div);
@@ -81,7 +81,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false' ], function() {
 		          google.maps.event.removeListener(this.listeners[i]);
 		     }
 		};
-		 
+
 		// Implement draw
 		MarkerLabel.prototype.draw = function() {
 		     var projection = this.getProjection();
@@ -93,10 +93,10 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false' ], function() {
 		     div.style.zIndex = this.get('zIndex'); //ALLOW LABEL TO OVERLAY MARKER
 		     this.div.innerHTML = this.get('text').toString();
 		};
-			
+
 		return Marker;
 
 	}());
-	
+
     // Google Maps API and all its dependencies will be loaded here.
 });
