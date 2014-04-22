@@ -1,13 +1,23 @@
-define([ 'jquery', 'underscore', 'backbone', 'text!../../templates/map/map.html' ], function($, _, Backbone, mapTemplate) {
+define([ 'jquery', 'underscore', 'backbone', '../models/map.model', 'text!../../templates/map/map.html' ], function($, _, Backbone, MapModel , mapTemplate) {
 
 	return ( function(){
 
 		var MapView = Backbone.View.extend({
 
-			template : _.template(mapTemplate, { mapClass : 'ds', mapId: 'gf' }),
+			el : 'body',
+
+			template : _.template( mapTemplate ),
 
 			initialize : function(){
-				console.log(this.template);
+
+				console.log(this.$el);
+				this.render();
+			},
+
+			render: function() {
+
+			    this.$el.html(this.template(this.model.attributes));
+			    return this;
 			}
 
 		});
