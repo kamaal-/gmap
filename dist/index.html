@@ -4,13 +4,24 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Google maps customizer</title>
+	<style>
+		html,body, .map-app, .container,.map-container,.map-wrapper, .elephas-map-canvas{
+			height: 100%;
+			width:100%;
+		}
+		.elephas-map-canvas{
+			display: block;
+		}
+	</style>
 </head>
 <body>
-	<div class="map-app">
-		<div class="map-container" style="width: 100%; min-height:2000px; display:block" id="the-map"></div>
+	
+	<div class="container">
+		<div class="map-wrapper js-map-wrapper" id="js-map-wrapper">
+			
+		</div>
 	</div>
-	<p>Hello!</p>
-	<div class="slider"></div>
-	<script data-main="lib/scripts/main.js" src="lib/scripts/vendor/requirejs/require.js"></script>
+	
+	<script data-main="out.js" src="lib/scripts/vendor/requirejs/require.js"></script>
 </body>
 </html>
