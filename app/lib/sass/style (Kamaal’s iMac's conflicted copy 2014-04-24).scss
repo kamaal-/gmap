@@ -11,8 +11,6 @@ ul,li,ol{
 	padding: 0;
 }
 
-
-
 //Layout
 .container{
 	position: relative;
@@ -27,17 +25,12 @@ ul,li,ol{
 	height: 100%;
 }
 .nav-tools{
-	height: 100%;
 	ul{
 		position: relative;
 		li{
-			z-index: 10;
 			>ul{
-				z-index: -1;
 				position: absolute;
-				left:-200px;
-				top: 0;
-				display: block;
+				display: none;
 			}
 			>a{
 				padding: 1em;
@@ -46,9 +39,7 @@ ul,li,ol{
 		}
 	}
 }
-.ul-tools{
-	height: 100%;
-}
+
 
 
 //Module 
@@ -62,15 +53,15 @@ ul,li,ol{
 .hide-text{
 	@include hide_font;
 }
-.state-animated, .sliding-tool{
-	transition: all .3s ease;
+.state-animated{
+	transition: all .25s ease-in;
 }
 
 
 
 //Theme
 body{
-	color: $text_color;
+	color: #5b5b5b;
 	font-size: 0.9em;
 }
 a{
@@ -78,6 +69,7 @@ a{
 	text-decoration: none;
 }
 .tools-nav-wrapper{
+	background: $base_bg;
 	box-shadow: rgba(0, 0, 0, 0.298039) 0px 4px 8px -1px;
 }
 .nav-tools{
@@ -89,9 +81,8 @@ a{
 		}
 	}
 }
-.ul-tools, .tools-nav-wrapper{
-	background: $base_bg;
-}
+
+
 
 
 
@@ -103,16 +94,6 @@ a{
 			>a:hover{
 				background: $brand_color;
 				color: $dark_text;
-			}
-		}
-	}
-}
-
-.nav-tools{
-	ul{
-		li{
-			.show-tool{
-				left: 100%;
 			}
 		}
 	}
