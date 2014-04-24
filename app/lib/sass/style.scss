@@ -106,6 +106,9 @@ a{
 			}
 			.active{
 				background: #eeeeee;
+				&:hover{
+					background: #eeeeee;
+				};
 			}
 		}
 	}
@@ -116,6 +119,7 @@ a{
 		li{
 			.show-tool{
 				left: 100%;
+				background: #eeeeee;
 			}
 		}
 	}
