@@ -10,7 +10,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 				borowserSupport = new Boolean(),
 				geolocationOptions = {
 					enableHighAccuracy : true,
-					timeout : 5000,
+					timeout : 2000,
 					maximumAge : 0
 				},
 				googleLatLng,

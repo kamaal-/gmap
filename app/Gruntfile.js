@@ -41,9 +41,9 @@ module.exports = function(grunt) {
     },
 
     compass: {
-      bootstrap: {
+      compilesass: {
         options: {
-          config: 'src/config.rb',
+          config: 'config.rb',
           environment: 'development',
           force: grunt.option('force') || false,
           outputStyle : 'compressed'
@@ -53,8 +53,8 @@ module.exports = function(grunt) {
 
 
     'watch' : {
-      files: ['src/js/*.js', 'src/sass/*.scss', 'index.html'],
-      tasks: ['compass', 'jshint', 'uglify'],
+      files: ['lib/sass/*.scss', 'index.html'],
+      tasks: ['compass'],
       options: {
         livereload: false,
       }

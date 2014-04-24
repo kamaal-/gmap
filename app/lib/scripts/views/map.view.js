@@ -43,7 +43,8 @@ define([ 'jquery', 'underscore', 'backbone', '../models/map.model', 'text!../../
 				var mapCanvas = $( '#' + this.model.attributes.mapId )[0],
 					mapOptions = {
 						center : new google.maps.LatLng( this.model.attributes.locaion.lat, this.model.attributes.locaion.lng ),
-						zoom: 8
+						zoom: 8,
+						disableDefaultUI: true
 					};
 
 				var map = new google.maps.Map( mapCanvas, mapOptions );

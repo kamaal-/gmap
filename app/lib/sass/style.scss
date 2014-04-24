@@ -1,11 +1,112 @@
-//Base
+@import 'variables';
+@import 'mixins';
+@import 'normalize';
+@import 'fonts';
+@import 'icons';
 
-//Layout 
+//Base
+ul,li,ol{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+//Layout
+.container{
+	position: relative;
+}
+.map-wrapper{
+	position: absolute;
+}
+.tools-nav-wrapper{
+	position: absolute;
+	z-index: 999;
+	
+	display: block;
+	height: 100%;
+}
+.nav-tools{
+	ul{
+		position: relative;
+		li{
+			>ul{
+				position: absolute;
+				display: none;
+			}
+			>a{
+				padding: 1em;
+				display: block;
+			}
+		}
+	}
+}
+
+
+
+
+
+
 
 //Module 
 
+
+
+
+
+
+
+
+
 //State 
+.hide-text{
+	@include hide_font;
+}
+.state-animated{
+	transition: all .25s ease-in;
+}
+
+
 
 //Theme
+body{
+	color: #5b5b5b;
+	font-size: 0.9em;
+}
+a{
+	color: $link_color;
+	text-decoration: none;
+}
+.tools-nav-wrapper{
+	background: $base_bg;
+	box-shadow: rgba(0, 0, 0, 0.298039) 0px 4px 8px -1px;
+}
+.nav-tools{
+	ul{
+		li{
+			>a{
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+
+
+
+
 
 //State Update
+.nav-tools{
+	ul{
+		li{
+			>a:hover{
+				background: $brand_color;
+				color: $dark_text;
+			}
+		}
+	}
+}
+
