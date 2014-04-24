@@ -60,9 +60,12 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 					mode = element.data('mode'),
 					li = element.closest('li');
 
+				$( li ).find('ul').toggleClass('show-tool');
+				element.toggleClass('active');
+
 				if('style' === mode){
 
-					$( li ).find('ul').toggleClass('show-tool');
+
 
 				}
 
