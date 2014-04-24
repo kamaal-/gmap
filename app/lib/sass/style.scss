@@ -85,6 +85,12 @@ a{
 		li{
 			>a{
 				font-size: 1.5em;
+				.text-node{
+					font-size: 14px;
+					&.hide-text{
+						@include hide_font;
+					}
+				}
 			}
 		}
 	}
