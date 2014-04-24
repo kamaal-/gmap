@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Google maps customizer</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		html,body, .map-app, .container,.map-container,.map-wrapper, .elephas-map-canvas{
+			height: 100%;
+			width:100%;
+		}
+		.elephas-map-canvas{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="tools-nav-wrapper">
+			<nav class="nav-tools">
+				<ul class="ul-tools">
+					<li>
+						<a class="using-icon state-animated" href=""><span class="hide-text">Style</span><i class="elephas-icon-paintbrush"></i></a>
+						<ul class="ul-tools level-two">
+							<li>
+								<a href="">Another Earth</a>
+							</li>
+						</ul>
+					</li>
+					<li><a class="using-icon state-animated" href=""><span class="hide-text">Marker</span><i class="elephas-icon-map-pin"></i></a></li>
+					<li><a class="using-icon state-animated" href=""><span class="hide-text">Data</span><i class="elephas-icon-layers"></i></a></li>
+					<li><a class="using-icon state-animated" href=""><span class="hide-text">Code</span><i class="elephas-icon-strategy"></i></a></li>
+					<li><a class="using-icon state-animated" href=""><span class="hide-text">Data</span><i class="elephas-icon-tools"></i></a></li>
+					<li><a class="using-icon state-animated" href=""><span class="hide-text">Code</span><i class="elephas-icon-document"></i></a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="map-wrapper js-map-wrapper" id="js-map-wrapper">
+			
+		</div>
+	</div>
+	
+	<script data-main="lib/scripts/main.js" src="lib/scripts/vendor/requirejs/require.js"></script>
+</body>
+</html>
