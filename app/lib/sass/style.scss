@@ -38,6 +38,12 @@ ul,li,ol{
 				left:-200px;
 				top: 0;
 				display: block;
+				width: 250px;
+				li{
+					>a{
+						padding: 0.7em 1em;
+					}
+				}
 			}
 			>a{
 				padding: 1em;
