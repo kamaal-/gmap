@@ -1,7 +1,7 @@
 define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'models/map.model' , 'views/map.view' , 'map-icon', 'backbone'],
 	function(goo, $, MapModel, MapView, icon, Backbone){
     var init = function(){
-    	
+
 			// Define Marker Shapes
 			var MAP_PIN = 'M0-165c-27.618 0-50 21.966-50 49.054C-50-88.849 0 0 0 0s50-88.849 50-115.946C50-143.034 27.605-165 0-165z',
 				SQUARE_PIN = 'M 50 -119.876 -50 -119.876 -50 -19.876 -13.232 -19.876 0.199 0 13.63 -19.876 50 -19.876 Z',
@@ -17,7 +17,8 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 				},
 				googleLatLng,
 				mapInit,
-				initializeLocation;
+				initializeLocation,
+				elementsInit;
 
 			if(navigator.geolocation) {
 
@@ -54,6 +55,13 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 				var mapView = new MapView({ model : mp });
 
 			};
+
+			elementsInit = function(){
+				var wHeight = window.innerHeight;
+				$('.ul-tools').height(wHeight);
+			};
+
+			elementsInit();
 
 			$('.js-tool').on('click', function(e){
 
