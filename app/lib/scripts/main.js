@@ -9,6 +9,7 @@ require.config({
         'text' : 'vendor/requirejs-plugins/lib/text',
         'async' : 'vendor/requirejs-plugins/src/async'
     }
+
 });
 
 require(['application/app'], function (app) {
