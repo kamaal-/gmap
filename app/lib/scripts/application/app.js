@@ -38,7 +38,7 @@ define(['jquery', 'models/map.model', 'views/map.view', 'async!http://maps.googl
             }, function () {
                 // User denied or somthing went wrong
 
-                // We put sahara desert as current location
+                // location shara
                 initializeLocation = { lat : 24.239078, lng : 11.336469 };
 
                 mapInit(initializeLocation);
