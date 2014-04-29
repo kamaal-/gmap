@@ -51,7 +51,6 @@ module.exports = function(grunt) {
       }
     },
 
-
     'watch' : {
       files: ['lib/sass/*.scss', 'index.html'],
       tasks: ['compass'],
