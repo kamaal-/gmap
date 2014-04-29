@@ -1,7 +1,7 @@
 define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'models/map.model' , 'views/map.view' , 'map-icon', 'backbone'],
 	function(goo, $, MapModel, MapView, icon, Backbone){
 
-	'use strict'
+	'use strict';
 
     var init = function(){
 
@@ -12,7 +12,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 				ROUTE = 'M49.986-58.919c-0.51-27.631-16.538-38.612-17.195-39.049l-2.479-1.692l-2.5 1.689c-4.147 2.817-8.449 4.247-12.783 4.247 c-7.178 0-12.051-3.864-12.256-4.032L-0.023-100l-2.776 2.248c-0.203 0.165-5.074 4.028-12.253 4.028 c-4.331 0-8.63-1.429-12.788-4.253l-2.486-1.678l-2.504 1.692c-1.702 1.17-16.624 12.192-17.165 38.907 C-50.211-56.731-43.792-12.754-0.003 0C47.609-13.912 50.23-56.018 49.986-58.919z',
 				ROUNDED = 'M50-80c0-11-9-20-20-20h-60c-11 0-20 9-20 20v60c0 11 9 20 20 20h60c11 0 20-9 20-20V-80z',
 				mapOptions = {},
-				borowserSupport = new Boolean(),
+				borowserSupport = false,
 				geolocationOptions = {
 					enableHighAccuracy : true,
 					timeout : 2000,
@@ -25,7 +25,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 
 			if(navigator.geolocation) {
 
-				borowserSupport = true
+				borowserSupport = true;
 
 				navigator.geolocation.getCurrentPosition( function(position) {
 
@@ -36,7 +36,6 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 					mapInit(initializeLocation);
 
 				}, function() {
-
 					//$('body').html("Aah! You have denied to provide your location. So we've placed you in 'Sahara Desert'");
 
 					initializeLocation = { lat : 24.239078, lng : 11.336469 };
@@ -56,38 +55,6 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 				});
 
 				var mapView = new MapView({ model : mp });
-
-
-
-				/*
-
-				var mapOptions = {
-			          center: new google.maps.LatLng(-34.397, 150.644),
-			          zoom: 8
-			        };
-
-				var map = new google.maps.Map(document.getElementById("the-map"), mapOptions);
-
-				var marker = new icon({
-					position: new google.maps.LatLng(-34.397, 150.644),
-						    animation: google.maps.Animation.DROP,
-						    draggable:true,
-						    map: map,
-						    zIndex: 9,
-						    title : "Im marker",
-						    label: '<i class="map-icon-hardware-store"></i>',
-						    icon: {
-				                    path: MAP_PIN,
-				                    fillColor: '#315a40',
-				                    fillOpacity: 1,
-				                    strokeColor: '',
-				                    strokeWeight: 0,
-				                    scale: 1/4
-				            	}
-
-				});
-				*/
-
 
 			};
 

@@ -28,7 +28,7 @@ module.exports = function(grunt) {
       
       options : { 
         
-        //reporter : require('jshint-stylish'),
+        reporter : require('jshint-stylish'),
        
       }
     },
