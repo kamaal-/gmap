@@ -23,14 +23,14 @@ module.exports = function(grunt) {
     },
 
     'jshint' : {
+      
       // define the files to lint
-      files: ['lib/scripts/application/js/app.js'],
+      all: ['Gruntfile.js', 'lib/scripts/application/js/app.js'],
 
       // configure JSHint (documented at http://www.jshint.com/docs/)
-
       options: {
-        
-          // more options here if you want to override JSHint defaults
+
+        reporter : require('jshint-stylish'),
         globals: {
           jQuery: true,
           console: true,
