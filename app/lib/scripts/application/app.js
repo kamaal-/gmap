@@ -54,6 +54,29 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 
 				var mapView = new MapView({ model : mp });
 
+
+				/*
+				var marker = new icon({
+		position: new google.maps.LatLng(-34.397, 150.644),
+			    animation: google.maps.Animation.DROP,
+			    draggable:true,
+			    map: map,
+			    zIndex: 9,
+			    title : "Im marker",
+			    label: '<i class="map-icon-hardware-store"></i>',
+			    icon: {
+	                    path: MAP_PIN,
+	                    fillColor: '#315a40',
+	                    fillOpacity: 1,
+	                    strokeColor: '',
+	                    strokeWeight: 0,
+	                    scale: 1/4
+	            	}
+
+	});
+				*/
+
+
 			};
 
 			elementsInit = function(){
