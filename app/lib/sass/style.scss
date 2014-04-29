@@ -34,37 +34,41 @@ ul,li,ol{
 	height: 100%;
 	ul{
 		position: relative;
-		li{
-			z-index: 10;
-			>ul{
-				z-index: -1;
-				position: absolute;
-				left:-700px;
-				top: 0;
-				display: block;
-				width: 250px;
-				li{
-					z-index: 10;
-					position: relative;
-					>a{
-						padding: 0.7em 1em;
-					}
-					.level-three{
-						z-index:-15;
-						width: 350px;
-						li{
-							z-index: -1;
-						}
-
-					}
-				}
-			}
-			>a{
-				padding: 1em;
-				display: block;
-			}
+	}
+}
+.nav-tools{
+	li{
+		z-index: 10;
+		>ul{
+			z-index: -1;
+			position: absolute;
+			left:-700px;
+			top: 0;
+			display: block;
+			width: 250px;
+		}
+		>a{
+			padding: 1em;
+			display: block;
 		}
 	}
+}
+.level-two{
+	li{
+		z-index: 10;
+		position: relative;
+	}
+	a{
+		padding: 0.7em 1em;
+	}
+}
+.level-three{
+	z-index:-15;
+	width: 350px;
+	li{
+		z-index: -1;
+	}
+
 }
 .ul-tools{
 	//height: 100%;
@@ -108,20 +112,18 @@ a{
 	box-shadow: rgba(0, 0, 0, 0.298039) 0px 4px 8px -1px;
 }
 .nav-tools{
-	ul{
-		li{
-			>a{
-				font-size: 1.5em;
-				.text-node{
-					font-size: 14px;
-					&.hide-text{
-						@include hide_font;
-					}
-				}
-			}
-		}
+	a{
+		font-size: 1.5em;
+		
 	}
 }
+.text-node{
+	font-size: 14px;
+	&.hide-text{
+		@include hide_font;
+	}
+}
+
 .ul-tools, .tools-nav-wrapper{
 	background: $base_bg;
 }
@@ -131,36 +133,29 @@ a{
 
 //State Update
 .nav-tools{
-	ul{
-		li{
-			>a:hover{
-				background: $brand_color;
-				color: $dark_text;
-			}
-			.active{
-				background: #eeeeee;
-				&:hover{
-					background: #eeeeee;
-				};
-			}
-		}
+	a:hover{
+		background: $brand_color;
+		color: $dark_text;
+	}
+	.active{
+		background: #eeeeee;
+		&:hover{
+			background: #eeeeee;
+		};
 	}
 }
 
 .nav-tools{
-	ul{
-		li{
-			.show-tool{
-				left: 100%;
-				background: #eeeeee;
-				ul{
-					left: -700px;
-				}
-				.show-tool{
-					left: 100%;
-				}
-			}
+	.show-tool{
+		left: 100%;
+		background: #eeeeee;
+		ul{
+			left: -700px;
+		}
+		.show-tool{
+			left: 100%;
 		}
 	}
+	
 }
 

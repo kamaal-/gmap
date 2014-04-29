@@ -11,7 +11,7 @@ define(['jquery', 'models/map.model', 'views/map.view', 'async!http://maps.googl
             //borowserSupport = false,
             geolocationOptions = {
                 enableHighAccuracy : true,
-                timeout : 2000,
+                timeout : 800,
                 maximumAge : 0
             },
             googleLatLng,
