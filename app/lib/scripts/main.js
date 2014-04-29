@@ -14,11 +14,5 @@ require.config({
 require(['application/app'], function( App ) {
 
 	App();
-	
-	/*
-
-	
-	
-	*/
 
 });
