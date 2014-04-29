@@ -59,13 +59,17 @@ define(['jquery', 'models/map.model', 'views/map.view', 'async!http://maps.googl
         };
 
         elementsInit = function () {
+
             var wHeight = window.innerHeight;
+
             $('.ul-tools').height(wHeight);
+
         };
 
         elementsInit();
 
         $('.js-tool').on('click', function () {
+
             var element = $(this),
                 //mode = element.data('mode'),
                 li = element.closest('li');
@@ -78,6 +82,7 @@ define(['jquery', 'models/map.model', 'views/map.view', 'async!http://maps.googl
             }*/
 
             return false;
+
         });
     };
 
