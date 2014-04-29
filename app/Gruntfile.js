@@ -29,9 +29,8 @@ module.exports = function(grunt) {
       // configure JSHint (documented at http://www.jshint.com/docs/)
 
       options: {
-      
+        
           // more options here if you want to override JSHint defaults
-      
         globals: {
           jQuery: true,
           console: true,
