@@ -53,7 +53,9 @@ define(['jquery', 'models/map.model', 'views/map.view', 'async!http://maps.googl
                 mapId : 'map-canvas'
             }),
                 mapView = new MapView({ model : mp });
+
             mapView.render();
+
         };
 
         elementsInit = function () {
