@@ -55,7 +55,16 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 				var mapView = new MapView({ model : mp });
 
 
+
 				/*
+
+				var mapOptions = {
+			          center: new google.maps.LatLng(-34.397, 150.644),
+			          zoom: 8
+			        };
+
+				var map = new google.maps.Map(document.getElementById("the-map"), mapOptions);
+
 				var marker = new icon({
 					position: new google.maps.LatLng(-34.397, 150.644),
 						    animation: google.maps.Animation.DROP,
