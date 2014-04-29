@@ -28,8 +28,9 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 
 			borowserSupport = true;
 
-			// Ask user permision for position
+			// Ask user permision for geo location
 			navigator.geolocation.getCurrentPosition( function(position) {
+				// IF user accept
 
 				googleLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
@@ -38,7 +39,9 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 				mapInit(initializeLocation);
 
 			}, function() {
+				// User denied or somthing went wrong
 
+				// We put sahara desert as current location
 				initializeLocation = { lat : 24.239078, lng : 11.336469 };
 
 				mapInit(initializeLocation);
