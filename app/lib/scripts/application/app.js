@@ -23,6 +23,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 			initializeLocation,
 			elementsInit;
 
+		//Check browser support for location services
 		if(navigator.geolocation) {
 
 			borowserSupport = true;
