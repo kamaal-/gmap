@@ -1,3 +1,4 @@
 node_modules/
 .sass-cache/
 /app/lib/scripts/application/commented.js
+/app/lib/scripts/vendor
