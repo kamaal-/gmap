@@ -36,7 +36,6 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 					mapInit(initializeLocation);
 
 				}, function() {
-					//$('body').html("Aah! You have denied to provide your location. So we've placed you in 'Sahara Desert'");
 
 					initializeLocation = { lat : 24.239078, lng : 11.336469 };
 
