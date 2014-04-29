@@ -19,7 +19,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 				maximumAge : 0
 			},
 			googleLatLng,
-			mapInit,
+			npm install grunt-jslint,
 			initializeLocation,
 			elementsInit;
 
@@ -45,6 +45,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 
 				// We put sahara desert as current location
 				initializeLocation = { lat : 24.239078, lng : 11.336469 };
+
 
 				mapInit(initializeLocation);
 			
