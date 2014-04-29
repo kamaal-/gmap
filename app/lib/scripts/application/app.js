@@ -1,5 +1,8 @@
 define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'models/map.model' , 'views/map.view' , 'map-icon', 'backbone'],
 	function(goo, $, MapModel, MapView, icon, Backbone){
+
+	'use strict'
+
     var init = function(){
 
 			// Define Marker Shapes
@@ -22,7 +25,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 
 			if(navigator.geolocation) {
 
-				borowserSupport = true;	
+				borowserSupport = true
 
 				navigator.geolocation.getCurrentPosition( function(position) {
 

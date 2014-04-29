@@ -22,20 +22,14 @@ module.exports = function(grunt) {
       
     },
 
-    'jshint' : {
+    jshint : {
       
-      // define the files to lint
-      all: ['Gruntfile.js', 'lib/scripts/application/js/app.js'],
-
-      // configure JSHint (documented at http://www.jshint.com/docs/)
-      options: {
-
-        reporter : require('jshint-stylish'),
-        globals: {
-          jQuery: true,
-          console: true,
-          module: true
-        }
+      all: ['Gruntfile.js', 'lib/scripts/main.js', 'lib/scripts/application/app.js' ],
+      
+      options : { 
+        
+        //reporter : require('jshint-stylish'),
+       
       }
     },
 
@@ -58,7 +52,7 @@ module.exports = function(grunt) {
       }
     },
 
-     requirejs: {
+    requirejs: {
       compile: {
         options: {
           baseUrl : "lib/scripts",
