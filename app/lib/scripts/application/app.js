@@ -32,8 +32,10 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 			navigator.geolocation.getCurrentPosition( function(position) {
 				// IF user accept
 
+				// We get location using position argument and set cords to map
 				googleLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
+				// Backbone model attribute
 				initializeLocation = { lat : googleLatLng.lat(), lng : googleLatLng.lng() };
 
 				mapInit(initializeLocation);
