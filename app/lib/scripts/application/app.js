@@ -28,6 +28,7 @@ define(['async!http://maps.google.com/maps/api/js?sensor=false', 'jquery', 'mode
 
 			borowserSupport = true;
 
+			// Ask user permision for position
 			navigator.geolocation.getCurrentPosition( function(position) {
 
 				googleLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
