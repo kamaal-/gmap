@@ -21,8 +21,6 @@ define([ 'jquery', 'underscore', 'backbone', '../models/map.model', 'text!../../
 
 		        }); 
 
-		        this.render();
-
 			},
 
 			beforeRender: function() { 

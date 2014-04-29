@@ -34,6 +34,23 @@ module.exports = function(grunt) {
     
     },
 
+    jslint : {
+      client :{
+        src: [
+          'lib/scripts/main.js','lib/scripts/application/app.js'
+        ],
+        directives: {
+          browser: true,
+          sloppy: true,
+          predef: [
+            'require',
+            'define',
+            'google'
+          ]
+        }
+      }
+    },
+
     compass: {
       compilesass: {
         options: {
