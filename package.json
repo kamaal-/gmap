@@ -42,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/kamaal-/gmap/issues"
   },
-  "homepage": "https://github.com/kamaal-/gmap"
+  "homepage": "https://github.com/kamaal-/gmap",
+  "scripts": {
+    "test": "grunt travis --verbose"
+  }
 }
