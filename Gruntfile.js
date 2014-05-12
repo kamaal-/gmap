@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
     jshint : {
       
-      all: ['Gruntfile.js', 'lib/scripts/main.js', 'lib/scripts/application/app.js' ],
+      all: ['Gruntfile.js', 'app/lib/scripts/main.js', 'app/lib/scripts/application/app.js' ],
       
       options : { 
         
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
     jslint : {
       client :{
         src: [
-          'lib/scripts/main.js','lib/scripts/application/app.js'
+          'app/lib/scripts/main.js','app/lib/scripts/application/app.js'
         ],
         directives: {
           browser: true,
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
     },
     
     'watch' : {
-      files: ['lib/sass/*.scss', 'index.html'],
+      files: ['app/lib/sass/*.scss', 'index.html'],
       tasks: ['compass'],
       options: {
         livereload: false,
@@ -74,10 +74,10 @@ module.exports = function(grunt) {
     requirejs: {
       compile: {
         options: {
-          baseUrl : "lib/scripts",
-          mainConfigFile : "../app/lib/scripts/main.js",
+          baseUrl : "app/lib/scripts",
+          mainConfigFile : "app/lib/scripts/main.js",
           name: "main",
-          out: '../dist/out.js'
+          out: 'dist/out.js'
         }
       }
     }

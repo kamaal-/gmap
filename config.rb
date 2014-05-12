@@ -1,5 +1,5 @@
 # Require any additional compass plugins here.
-sass_dir           = "/lib/sass"
+sass_dir           = "app/lib/sass"
 http_path          = ""
 css_dir            = "#{http_path}/css"
 fonts_dir          = "#{http_path}/fonts"
